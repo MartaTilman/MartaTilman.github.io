@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    for (let number = 1; number <= 100; number = number + 1) {
+        let izracun3 = number % 3;
+        let izracun5 = number % 5;
+        if (izracun3 == 0) {
+            console.log("Fizz");
+        }
+        if (izracun5 == 0) {
+            console.log("Buzz");
+        }
+        if (izracun3 == 0 && izracun5 == 0) {
+            console.log("FizzBuzz");
+        }
+        console.log(number);
+
+    }
+</script>
+
+</html>

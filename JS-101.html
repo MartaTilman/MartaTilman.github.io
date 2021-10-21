@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a = prompt("Unesi prvi broj");
+    let b = prompt("Unesi drugi broj");
+    let c = prompt("Unesi treći broj");
+    let d = prompt("Unesi četvrti broj");
+    let maks;
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    d = parseInt(d);
+    maks = parseInt(maks);
+    if (a > b && a > c && a > d) {
+        maks = a;
+    }
+    else if (b > a && b > c && b > d) {
+        maks = b;
+    }
+    else if (c > a && c > b && c > d) {
+        maks = c;
+    }
+    else if (d > a && d > b && d > c) {
+        maks = d;
+    }
+    console.log("Najveći između njih je: " + maks);
+</script>
+
+</html>
