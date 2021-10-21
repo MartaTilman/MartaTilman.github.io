@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta Tilman</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_o0WvxZkL4sS9ytKkMexLH");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <h1>Marta Tilman</h1>
+
+
+    <div id="div1">
+        <h2>Nešto o meni...</h2>
+        Zovem se Marta Tilman. Dolazim iz mjesta u srcu Slavonije koje se zove Đakovo.
+        Imam 19 godina. Pohađala sam Osnovnu školu Vladimira Nazora u Đakovu. Nakon
+        završenog osnovnoškolskog obrazovanja sam pohađala Gimnaziju Antuna Gustava Matoša
+        u Đakovu. Nakon srednje škole sam se odlučila za daljnje školovanje na Sveučilištu Jurja
+        Dobrile, smjer informatika. U slobdno vrijeme volim crtati. Najviše volim crtati sa olovkom, ali suhe
+        pastele sumi isto jako drage zbog lakoće blendanja boja.
+
+    </div>
+    <h2 id="h22">Ovo su neki od mojih radova:</h2>
+    <div id="div2">
+
+        <img id="dijete" src="slike_stranice/dijete_i_majka.jpeg" alt="Majka i dijete">
+        <img id="duvnjak" src="slike_stranice/duvnjak.jpeg" alt="Duvnjak">
+        <img id="kit" src="slike_stranice/kit.jpeg" alt="Kit">
+
+    </div>
+    <div id="div3">
+        <img id="kriz" src="slike_stranice/kriz.jpeg" alt="Križ">
+        <img id="zene" src="slike_stranice/zene.jpeg" alt="Žene">
+        <img id="master" src="slike_stranice/master_yi.jpeg" alt="Master Yi">
+    </div>
+    <br>
+    <div id="email">
+        <form id="contact-form">
+            <h2 id="h2email">Želiš li mi poslati poruku?</h2>
+            <input type="hidden" name="contact_number">
+            <label>Ime</label><br>
+            <input id="unos" type="text" name="user_name"> <br>
+            <label>Email</label><br>
+            <input id="unos1" type="email" name="user_email"><br>
+            <label>Poruka</label><br>
+            <textarea id="poruka" name="message"></textarea>
+            <input id="gumb" type="submit" value="Pošalji">
+        </form>
+    </div>
+
+
+</body>
+<style>
+    h1 {
+        color: black;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    h2 {
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+
+
+
+    }
+
+    #h22 {
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        padding-left: 100px;
+    }
+
+    #div1 {
+        height: 280px;
+        max-width: 80%;
+        background-color: bisque;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 50px;
+        text-align: left;
+        margin: auto;
+
+
+
+    }
+
+
+    body {
+        background-color: lightgray;
+    }
+
+    #div2 {
+        height: 280px;
+        max-width: 80%;
+        background-color: bisque;
+        padding: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        margin: auto;
+
+
+
+
+    }
+
+
+
+    #dijete {
+        float: left;
+        border-radius: 8px;
+        width: 16%;
+        height: auto;
+        padding-left: 80px;
+
+    }
+
+    #kit {
+        float: right;
+        border-radius: 8px;
+        width: 28%;
+        height: auto;
+        padding-right: 80px;
+
+    }
+
+    #kriz {
+        float: left;
+        border-radius: 8px;
+        width: 20%;
+        height: auto;
+        padding-top: 70px;
+        padding-left: 80px;
+
+    }
+
+    #master {
+        float: right;
+        border-radius: 8px;
+        width: 25%;
+        height: auto;
+        padding-right: 100px;
+
+    }
+
+    #duvnjak {
+        border-radius: 8px;
+        width: 20%;
+        height: auto;
+        padding-left: 140px;
+    }
+
+    #zene {
+        border-radius: 8px;
+        width: 18%;
+        height: auto;
+        padding-top: 20px;
+        padding-left: 150px;
+    }
+
+    #div3 {
+        height: 400px;
+        max-width: 80%;
+        background-color: bisque;
+        padding: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        margin: auto;
+
+
+    }
+
+    #email {
+        padding-left: 500px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #h2email {
+        margin: auto;
+        padding-left: 65px;
+    }
+
+    #unos,
+    #unos1,
+    select,
+    textarea {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    #poruka {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 300px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        padding-left: 100px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #gumb {
+        background-color: bisque;
+        color: black;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        opacity: 0.9;
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
+
+</html>
