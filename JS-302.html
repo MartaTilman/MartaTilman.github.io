@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const isti_znakovi = function (str) {
+        var a = 0;
+        for (var i = 0, b = 1; b < str.length;) {
+            if (str[b] === str[i]) {
+                if (a < b - i + 1) {
+                    a = b - i + 1;
+                }
+                b++;
+            } else {
+                i = b;
+            }
+        }
+        return a;
+    }
+    console.log(isti_znakovi("baaaccd"));
+    console.log(isti_znakovi("ba2dll"));
+</script>
+
+</html>
